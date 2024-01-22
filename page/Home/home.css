@@ -286,4 +286,15 @@ ul {
     color: rgba(41, 41, 41, 0.8);
 }
 
+.content .content_img {
+    margin-top: 50px;
+    height: 730px;
+}
+
+.content .content_img img {
+    height: 100%;
+}
+
+
+
 /* Footer */
