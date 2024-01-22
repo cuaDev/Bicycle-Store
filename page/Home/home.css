@@ -416,3 +416,63 @@ ul {
 }
 
 /* Footer */
+
+.footer {
+    margin-top: 50px;
+    background-color: #000;
+}
+
+.footer_bgr {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    padding: 45px 0;
+}
+
+.footer .footer_about {
+    flex-basis: 40%;
+}
+
+.footer .footer_infor,
+.footer .footer_account,
+.footer .footer_user {
+    flex-basis: 20%;
+}
+
+.footer .title,
+.footer .description {
+    margin-bottom: 30px;
+}
+
+.footer .title h2 {
+    text-transform: uppercase;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.footer .description p {
+    color: #fff;
+}
+
+.footer .icon {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.footer .list li {
+    margin-bottom: 10px;
+}
+
+.footer .list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .list li a:hover {
+    color: #0ab0a6;
+}
