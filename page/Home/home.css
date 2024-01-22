@@ -249,10 +249,10 @@ ul {
 .content_shop .content_shop_item .item img {
     width: 300px;
     height: 200px;
+    object-fit: contain;
 
 }
 
-/* .content_shop_item .item .item_status {} */
 
 .content_shop_item .item .item_status span {
     padding: 2px 5px;
