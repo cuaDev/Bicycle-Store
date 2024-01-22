@@ -131,11 +131,15 @@ ul {
 }
 
 /* Content about */
-.content_about {
+.content_about,
+.content_shop,
+.content_certificate {
     margin-top: 50px;
 }
 
-.content_about .content_about_title h1 {
+.content_about .content_about_title h1,
+.content_shop .content_shop_title h1,
+.content_post .content_post_title h1 {
     text-align: center;
     font-size: 48px;
     color: #292929;
@@ -152,7 +156,7 @@ ul {
     flex: 40%;
 }
 
-.content_about .content_about_description .content_about_description_left img {
+.content_about .content_about_description_left img {
     width: 520px;
     height: 520px;
     border-radius: 0 50px 50px 0;
@@ -177,7 +181,7 @@ ul {
 
 .content_about .content_about_description_right button {
     margin-top: 50px;
-    padding: 20px 40px;
+    padding: 17px 40px;
     text-transform: uppercase;
     font-size: 16px;
     color: #fff;
@@ -192,4 +196,283 @@ ul {
     border: 1px solid #0ab0a6;
 }
 
+/* content shop */
+.content_shop {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.content_shop .content_shop_tag {
+    margin-top: 50px;
+}
+
+.content_shop .content_shop_tag ul {
+    display: flex;
+}
+
+.content_shop .content_shop_tag ul li {
+    padding: 10px 20px;
+    border: 1px solid #0ab0a6;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.content_shop .content_shop_tag ul li:hover {
+    background-color: #0ab0a6;
+    border: #0ab0a6;
+}
+
+.content_shop .content_shop_tag ul li a {
+    color: #0ab0a6;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content_shop .content_shop_tag ul li:hover a {
+    color: #fff;
+}
+
+.content_shop .content_shop_item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.content_shop .content_shop_item .item {
+    /* flex: 30%; */
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content_shop .content_shop_item .item img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+
+}
+
+
+.content_shop_item .item .item_status span {
+    padding: 2px 5px;
+    border: 1px solid #0ab0a6;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #0ab0a6;
+    color: #fff;
+
+}
+
+.content_shop_item .item .item_infor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content_shop_item .item .item_infor .item_infor_name a {
+    color: #000;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.content_shop_item .item .item_infor .item_infor_name a:hover {
+    color: #0ab0a6;
+}
+
+.content_shop_item .item .item_infor .item_infor_cost p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: rgba(41, 41, 41, 0.8);
+}
+
+.content .content_img {
+    margin-top: 50px;
+    height: 730px;
+}
+
+.content .content_img img {
+    height: 100%;
+}
+
+.content .content_certificate {
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.content .content_certificate .content_certificate_item:hover {
+    border: 1px solid #000;
+}
+
+.content .content_certificate .content_certificate_item {
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.content .content_certificate .content_certificate_item .icon,
+.content .content_certificate .content_certificate_item .name {
+    margin-bottom: 15px;
+}
+
+.content .content_certificate .content_certificate_item .name p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.content .content_certificate .content_certificate_item .description p {
+    color: #616161;
+    line-height: 1.625;
+    font-size: 18px;
+}
+
+.content_post {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+
+.content_post .content_post_item {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.content_post .content_post_item .item {
+    flex-basis: 30%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.content_post .content_post_item .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.content_post .content_post_item .tag,
+.content_post .content_post_item .time,
+.content_post .content_post_item .title,
+.content_post .content_post_item .button {
+    margin-top: 20px;
+}
+
+.content_post .content_post_item .tag span {
+    padding: 5px;
+    background-color: #0ab0a6;
+    border: 1px solid #0ab0a6;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.content_post .content_post_item .tag span:hover {
+    background-color: #EBEBEB;
+    color: #0ab0a6;
+    border: none;
+}
+
+.content_post .content_post_item .time span {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #616161;
+}
+
+.content_post .content_post_item .title a {
+    color: #292929;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content_post .content_post_item .title a:hover {
+    color: #0ab0a6;
+}
+
+.content_post .content_post_item .button button {
+    padding: 12px 22px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #0ab0a6;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.content_post .content_post_item .button button:hover {
+    border: 1px solid #0ab0a6;
+    background-color: #fff;
+    color: #0ab0a6;
+}
+
 /* Footer */
+
+.footer {
+    margin-top: 50px;
+    background-color: #000;
+}
+
+.footer_bgr {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    padding: 45px 0;
+}
+
+.footer .footer_about {
+    flex-basis: 40%;
+}
+
+.footer .footer_infor,
+.footer .footer_account,
+.footer .footer_user {
+    flex-basis: 20%;
+}
+
+.footer .title,
+.footer .description {
+    margin-bottom: 30px;
+}
+
+.footer .title h2 {
+    text-transform: uppercase;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.footer .description p {
+    color: #fff;
+}
+
+.footer .icon {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.footer .list li {
+    margin-bottom: 10px;
+}
+
+.footer .list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .list li a:hover {
+    color: #0ab0a6;
+}
