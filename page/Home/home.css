@@ -167,6 +167,7 @@ ul {
     width: 520px;
     height: 520px;
     border-radius: 0 50px 50px 0;
+    object-fit: cover;
 }
 
 .content_about .content_about_description_right {
@@ -247,6 +248,7 @@ ul {
     padding-right: 40px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 
 }
 
@@ -343,7 +345,7 @@ ul {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
 
 }
 
@@ -484,7 +486,15 @@ ul {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+/* General reponsive */
+
+/* @media only screen and (max-wdth: 1200px) {
+    .header .header_navigation {
+        display: none;
+    }
+} */
+
+@media only screen and (max-width: 992px) {
     .header .header_navigation {
         display: none;
     }
@@ -534,5 +544,22 @@ ul {
         width: 100%;
     }
 
-    /* .content_about .content_about_description_left  */
+    .content_shop .content_shop_item .item {
+        flex: 30%;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .content .content_img {
+        height: 500px;
+    }
+
+    .content .content_certificate {
+        flex-direction: column;
+    }
+
+    .content_post .content_post_item {
+        flex-direction: column;
+    }
 }
