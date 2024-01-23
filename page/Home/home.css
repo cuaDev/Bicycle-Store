@@ -167,6 +167,7 @@ ul {
     width: 520px;
     height: 520px;
     border-radius: 0 50px 50px 0;
+    object-fit: cover;
 }
 
 .content_about .content_about_description_right {
@@ -485,7 +486,15 @@ ul {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+/* General reponsive */
+
+/* @media only screen and (max-wdth: 1200px) {
+    .header .header_navigation {
+        display: none;
+    }
+} */
+
+@media only screen and (max-width: 992px) {
     .header .header_navigation {
         display: none;
     }
