@@ -617,6 +617,83 @@ const iPhone = new Smartphones("iPhone");
 console.log(iPhone.get_color()); // output is: silver
 console.log(iPhone.#phone_color) // output is: Private field '#phone_color' must be declared in an enclosing class
 ``````
+# 19. this, call, apply, bind
+## a. this
+- This trong phương thức object: Khi được sử dụng trong một phương thức đối tượng, this đề cập đến đối tượng.
+``````
+const test = {
+    prop: 42,
+    func: function () {
+        return this.prop;
+    },
+};
+console.log(test.func());
+// Expected output: 42
+``````
+-This một mình :
+## b. call
+- Phương thức call() được sử dụng để gọi một hàm và thiết lập giá trị this cho hàm đó, cùng với các đối số (arguments) được truyền vào dưới dạng danh sách các tham số.
+``````
+const person = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+}
+const person2 = {
+    firstName:"Mary",
+    lastName: "Doe"
+}
+person.fullName.call(person1);
+// This will return "John Doe":
+``````
+``````    
+const person = {
+    fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+}
+const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+}
+person.fullName.call(person1, "Oslo", "Norway");
+``````
+## c. apply
+- Tương tự call
+- chỉ khác với call : lấy các đối số dưới dạng một mảng
+``````
+const person = {
+    fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+}
+const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+}
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+``````
+## d. bind
+- Phương thức bind(), một đối tượng có thể mượn một phương thức từ một đối tượng khác.
+- Ví dụ: member mượn phương thức của person
+``````
+const person = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+}
+const member = {
+    firstName:"Hege",
+    lastName: "Nilsen",
+}
+let fullName = person.fullName.bind(member); // Hege Nilsen
+
 
 
 
