@@ -766,7 +766,23 @@ Person.prototype.nationality = "English";
 
 ## b. Closure
 - Cho phép một hàm truy cập và sử dụng các biến từ phạm vi ngoài của nó
-
+# 23. Call stack & Hoisting
+## a. Call stack
+- Vào sau ra trước
+## b. Hoisting
+- Hoisting (nâng cao) là một khái niệm trong JavaScript mô tả cách mà khai báo biến và khai báo hàm được di chuyển lên trên đầu phạm vi của chúng trước khi mã JavaScript được thực thi. Điều này cho phép bạn sử dụng biến và hàm trước khi chúng được khai báo trong mã.
+- Tuy nhiên, giá trị gán cho biến không được di chuyển lên trên đầu phạm vi, chỉ có phần khai báo được di chuyển. Do đó, khi sử dụng biến trước khi gán giá trị, nó sẽ có giá trị là undefined.
+    - Đúng:
+    ``````
+    a = 10;
+    console.log(a)
+    var a
+    ``````
+    - Sai:
+    ``````
+    console.log(hoist);
+    var hoist = 500; //undefined
+    ``````
 
 
 
