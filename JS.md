@@ -567,6 +567,30 @@ fruits.reverse()
         eyeColor:"blue"
         };
 ``````
+# 17.Rest & Spread
+## a. Rest
+- Rest parameters cho phép đại diện cho một số lượng tham số không xác định trong một hàm và biểu diễn chúng dưới dạng một mảng.
+- Được ký hiệu bằng ba dấu chấm (...) và được đặt trước tên tham số cuối cùng trong khai báo hàm.
+``````
+    function rest(...rest){
+        console.log(rest) // [1, 2, 3, 4]
+    }
+    rest(1, 2, 3, 4)
+``````
+## b. Spread
+- Spread đại diện lấy tất cả các phần tử của mảng hoặc object
+- Được ký hiệu bằng ba dấu chấm (...)
+``````
+// Mở rộng mảng
+const numbers = [1, 2, 3, 4, 5];
+const newNumbers = [...numbers, 6, 7, 8];
+console.log(newNumbers);  // Output: [1, 2, 3, 4, 5, 6, 7, 8]
+// Mở rộng đối tượng
+const person = { name: 'John', age: 30 };
+const newPerson = { ...person, profession: 'Developer' };
+console.log(newPerson);  // Output: { name: 'John', age: 30, profession: 'Developer' }
+``````
+
 
 
 
