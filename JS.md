@@ -1,17 +1,17 @@
-# Code structure
-## ES5 và ES6
-### ES5
+# 1. Code structure
+# 2. ES5 và ES6
+## a. ES5
 - Là phiên bản thứ 5
 - Phát hành năm 2009
-### ES6
+## b. ES6
 - Là phiên bản thứ 6
 - Phát hành năm 2015
 - Có thêm một kiểu dữ liệu nguyên thủy là "symbol" 
 - Có thêm hai cách khai báo là "let" và "const"
 - Có các khai báo hàm không cần dùng keyword "function là arrow function
 - Có thêm vòng lặp for...of để lặp giá trị
-## Variable và constant
-### Variable
+# 3. Variable và constant
+## a. Variable
 - Có 4 cách khai báo biến
     1. Khai báo tự động
 
@@ -36,7 +36,7 @@
     ``````
 
 
-### Constant
+## b. Constant
 - Dùng để khai báo một tham chiếu không đổi đến giá trị ( không khai báo lại được, không gán lại được)
 - Có block scope
 - Sử dụng keyword "const" để khai báo
@@ -101,8 +101,8 @@
                     };
                 ->Error
     4. Một function
-## Data type & Data structure, Type conversions
-### Data type
+# 4. Data type & Data structure, Type conversions
+## a. Data type
 - Kiểu dữ liệu nguyên thủy : Là dữ liệu không phải là đối tượng và không có phương thức hoặc thuộc tính
     - Có 7 kiểu dữ liệu nguyên thủy :
         - string
@@ -117,7 +117,7 @@
         - object
         - array
         - date
-### Type conversions
+## b. Type conversions
 - Biến có thể chuyển đổi thành một kiểu dữ liệu khác
 - Chuyển đổi từ string sang number bằng phương thức: Number(), parseFloat(), parseInt()
 ``````
@@ -130,8 +130,8 @@
         String(123) -> "123"
         (123).toString -> "123"
 ``````
-## Operators, Comparisons, Maths
-### Operatoers
+# 5. Operators, Comparisons, Maths
+## a. Operatoers
 - Có những kiểu toán tử khác nhau:
     1. Toán tử số học ( +, -, *, **, /, %, ++, -- )
     2. Toán tử gán ( =, +=, -=, *=, /=, %=, **=)
@@ -144,7 +144,7 @@
         -> John Doe
     ``````
     5. Toán tử logic ( &&, ||, !)
-### Maths
+## b. Maths
 - Cho phép thực hiện các tác vụ trên số
     - Các phương thức hay dùng:
         1. Math.round(x): Trả về x được làm tròn về số nguyên gần nhất
@@ -169,4 +169,10 @@
             -> 4
         ``````
         4. Math.trunc(x): Trả về phần nguyên của x (mới trong ES6)
-
+# 6. Nullish coalescing operator
+- Là toán tử logic, trả ra kết quả bên phải khi bên trái trả ra falsy
+- Ví dụ:
+``````
+    const foo = null ?? 'default string';
+    -> 'default string'
+``````
