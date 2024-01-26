@@ -315,5 +315,23 @@
         });
 ``````
 
+# 12. async / await
+- Để viết mã bất đồng bộ một các đồng bộ
+- Các tác vụ không đồng bộ thường được thực hiện bằng cách sử dụng Promises hoặc callbacks. Tuy nhiên, việc sử dụng Promises và callbacks có thể dẫn đến việc lồng nhau nhiều mức độ và gây ra hiện tượng "callback hell"
+- Async/await giúp giải quyết vấn đề này bằng cách sử dụng từ khóa async và await để định nghĩa và điều khiển quá trình thực thi mã không đồng bộ
+    - sync: Từ khóa async được sử dụng để định nghĩa một hàm bất đồng bộ. Một hàm được khai báo với từ khóa async sẽ luôn trả về một Promise.
+    - await: Từ khóa await chỉ được sử dụng bên trong một hàm được khai báo là async. Nó dùng để đợi cho đến khi một Promise được giải quyết (resolved) và trả về kết quả. Trong khi chờ, luồng thực thi của hàm sẽ tạm dừng, nhưng không chặn luồng chính (main thread) của trình duyệt.
+- Ví dụ:
+``````
+    async function myDisplay() {
+        let myPromise = new Promise(function(resolve) {
+            resolve("I love You !!");
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+        }
+
+    myDisplay();
+``````
+
 
 
