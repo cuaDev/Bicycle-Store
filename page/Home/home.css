@@ -11,8 +11,15 @@ ul {
 
 /* Header */
 
+.container {
+    position: relative;
+}
+
 .header {
-    min-height: 100px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100px;
     padding: 0 70px;
     display: flex;
     justify-content: space-between;
@@ -56,7 +63,7 @@ ul {
 
 /* Content */
 .content {
-    margin-top: 20px;
+    padding-top: 120px;
 }
 
 .content_intro,
@@ -494,7 +501,7 @@ ul {
     }
 } */
 
-@media only screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .header .header_navigation {
         display: none;
     }
@@ -561,5 +568,11 @@ ul {
 
     .content_post .content_post_item {
         flex-direction: column;
+    }
+}
+
+@media screen and (min-widh: 993px) {
+    .header .header_navigation ul li a {
+        font-size: 14px;
     }
 }
