@@ -176,3 +176,32 @@
     const foo = null ?? 'default string';
     -> 'default string'
 ``````
+# 7. Functions & Arrow functions
+## a. Function
+- Function là một khối code được thiết kế để thực hiện một tác vụ cụ thể
+    - Các cách khai báo function
+        1. Function declaration
+            - Ví dụ:
+            ``````
+                function myFunction(p1, p2) {
+                    return p1 * p2;
+                }
+            ``````
+        2. Function expression
+            - Ví dụ:
+            ``````
+                var count = function(array) { 
+                    // Function expression  
+                    return array.length;
+                }
+            ``````
+        3. Arrow function
+            - Ví dụ:
+            ``````
+                var absValue = (number) => {  
+                    if (number < 0) {
+                        return -number;
+                    }
+                    return number;
+                }
+            ``````
