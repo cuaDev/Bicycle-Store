@@ -170,16 +170,16 @@ String(123) -> "123"
         ``````
         2. Math.ceil(x): Trả về x được làm tròn lên số nguyên gần nhất
         ``````
-        Math.round(4.6);
+        Math.ceil(4.6);
         -> 5
-        Math.round(4.4);
+        Math.ceil(4.4);
         -> 5
         ``````
         3. Math.floor(x): Trả về x được làm tròn xuống số nguyên gần nhất
         ``````
-        Math.round(4.6);
+        Math.floor(4.6);
         -> 4
-        Math.round(4.4);
+        Math.floor(4.4);
         -> 4
         ``````
         4. Math.trunc(x): Trả về phần nguyên của x (mới trong ES6)
