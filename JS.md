@@ -783,6 +783,11 @@ Person.prototype.nationality = "English";
     console.log(hoist);
     var hoist = 500; //undefined
     ``````
+# 24. Modules, Export, Import, Dynamic imports
+# 25. Regular Expression
+# 26. HTML DOM
+# 27. BOM
+# 28. Repaint & Reflow
 
 
 
