@@ -693,6 +693,45 @@ const member = {
     lastName: "Nilsen",
 }
 let fullName = person.fullName.bind(member); // Hege Nilsen
+``````
+# 20. Map & Set
+## a. Map
+- Là một cấu trúc dữ liệu khóa-giá trị, trong đó mỗi giá trị được liên kết với một khóa duy nhất.
+- Một Map không chứa các khóa trùng lặp, và mỗi khóa chỉ liên kết với duy nhất một giá trị.
+- Thêm phần tử đến Map() bằng phương thức set()
+``````
+const fruits = new Map();
+// Set Map Values
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+``````
+- Phương thức set() cũng làm thay đổi giá trị hiện tại
+- Phương thức get() lấy giá trị của khóa trong Map()
+``````
+fruits.get("apples");    // Returns 500
+``````
+- Thuộc tính size trả về số phần tử trong Map()
+``````
+fruits.size;
+``````
+- Phương thức delete() dùng để xóa một phần tử bằng key
+``````
+fruits.delete("apples");
+``````
+- phương thức clear() dùng để xóa tất cả các phần tử
+``````
+fruits.clear();
+``````
+- Phương thức has() dùng để check xem key có tồn tại trog Map() không
+``````
+fruits.has("apples");
+``````
+## b. Set
+- Là một cấu trúc dữ liệu không trùng lặp, trong đó mỗi giá trị là duy nhất.
+- Một Set có thể chứa bất kỳ kiểu dữ liệu nào và sẽ tự động loại bỏ bất kỳ giá trị trùng lặp nào
+- Phương thức set() dùng để thêm phần tử
+- Nếu thêm phần tử trùng lặp thì sẽ lưu phần tử đầu tiên
 
 
 
