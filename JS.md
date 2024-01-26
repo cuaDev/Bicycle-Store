@@ -292,5 +292,28 @@
         console.log('Đây là một hàm callback.');
     }
 ``````
+# 11. Promises
+- Đại diện cho một giá trị ở thời điểm hiện tại có thể chưa tồn tại, nhưng sẽ được xử lý và có giá trị vào một thời điểm đó trong tương lai.
+- Một promise có 3 trạng thái :
+    1. Pending: Là trạng thái Promise mới được tạo
+    2. Resolve: Là trạng thái Promise thực hiện thành công
+    3. Reject: Là trạng thái Promise thực hiện thất bại
+- Ví dụ:
+``````
+    const myPromise = new Promise((resolve, reject) => {
+        // Thực hiện công việc không đồng bộ ở đây
+        // Nếu thành công, gọi hàm resolve với giá trị mong muốn
+        // Nếu thất bại, gọi hàm reject với lý do (error)
+    });
+        // Sử dụng then để xử lý kết quả khi Promise thực hiện thành công
+    myPromise
+        .then((result) => {
+            console.log('Thành công:', result);
+        })
+        .catch((error) => {
+            console.error('Thất bại:', error);
+        });
+``````
+
 
 
