@@ -743,6 +743,30 @@ function Person(first, last, age, eyecolor) {
 }
 Person.prototype.nationality = "English";
 ``````
+# 22. Scope & Closure
+## a. Scope
+- Có 3 loại scope
+    - Block scope: Các biến được khai báo bên trong khối { } không thể được truy cập từ bên ngoài khối
+    > Có 2 keyword có block scope : let và const
+    ``````
+    {
+        let x = 2;
+    }
+    // x can NOT be used here
+    ``````
+    - Function scope: Các biến được xác định bên trong hàm không thể truy cập được (hiển thị) từ bên ngoài hàm.
+    - Global Scope: Một biến được khai báo bên ngoài hàm sẽ trở thành GLOBAL.
+    ``````
+    let carName = "Volvo";
+    // code here can use carName
+    function myFunction() {
+        // code here can also use carName
+    }
+    ``````
+
+## b. Closure
+- Cho phép một hàm truy cập và sử dụng các biến từ phạm vi ngoài của nó
+
 
 
 
