@@ -356,6 +356,153 @@ catch (error) {
     console.error('Đã xảy ra lỗi:',error);
 }
 ``````
+# 13. Arrays, Array methods, Array iteration, Array const, Sorting arrays
+## a. Array
+- Tạo array
+``````
+// Cách 1
+const cars = ["Saab", "Volvo", "BMW"];
+// Cách 2
+const cars = new Array("Saab", "Volvo", "BMW");
+``````    
+## b. Array methods
+- Phương thức toString() chuyển đổi một mảng thành một chuỗi các giá trị mảng (được phân tách bằng dấu phẩy).
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+-> Banana,Orange,Apple,Mango
+``````
+- Phương thức join() cũng nối tất cả các phần tử mảng thành một chuỗi. Nó hoạt động giống như toString(), nhưng ngoài ra bạn có thể chỉ định dấu phân cách
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+-> Banana * Orange * Apple * Mango
+``````
+- Phương thức pop() xóa một phần tử cuối cùng của mảng
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+-> ["Banana", "Orange", "Apple"]
+``````
+- Phương thức push() thêm một phần tử mới vào mảng (ở cuối)
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+-> ["Banana", "Orange", "Apple", "Mango", "kiwi"]
+``````
+- Phương thức shift() xóa phần tử đầu tiên của mảng
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+-> ["Orange", "Apple", "Mango"]
+``````
+- Phương thúc unshift() thêm phần tử đầu tiên của mảng
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon")
+-> ["Lemon", "Banana", "Orange", "Apple", "Mango"]
+``````
+- Thuộc tính length cung cấp một cách dễ dàng để nối thêm một phần tử mới vào một mảng
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";
+-> ["Banana", "Orange", "Apple", "Mango", "Kiwi"]
+``````
+- Phương thức concat() tạo một mảng mới bằng cách hợp nhất (nối) các mảng hiện có
+- Phương thức concat() không thay đổi các mảng hiện có. Nó luôn trả về một mảng mới.
+``````
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+-> ["Cecilie", "Lone", "Emil", "Tobias", "Linus"]
+``````
+## c. Array iteration
+- Phương thức forEach() được sử dụng để duyệt qua từng phần tử trong một mảng và thực hiện một hàm callback trên mỗi phần tử đó.
+- Phương thức forEach() không thay đổi mảng gốc và không trả ra mảng mới.
+``````
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(number, index) {
+        console.log(`Phần tử thứ ${index} có giá trị là ${number}`);
+});
+->  Phần tử thứ 0 có giá trị là 1
+    Phần tử thứ 1 có giá trị là 2
+    Phần tử thứ 2 có giá trị là 3
+    Phần tử thứ 3 có giá trị là 4
+    Phần tử thứ 4 có giá trị là 5
+``````
+- Phương thức map() dùng để duyệt qua từng phần tử trong một mảng và tạo ra một mảng mới với các giá trị được biến đổi từ các phần tử gốc.
+- Trả về một mảng mới có cùng độ dài như mảng gốc, với các giá trị đã được biến đổi hoặc không biến đổi.
+- Thường được sử dụng khi bạn muốn biến đổi mỗi phần tử trong mảng gốc và tạo một mảng mới từ các giá trị đã biến đổi.
+``````
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = numbers.map(function(number) {
+    return number * 2;
+});
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+``````
+- Phương thức filter() tạo ra một mảng mới với các phần tử pass điều kiện
+``````
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+    return value > 18;
+}
+``````
+- Phương thức reduce() được sử dụng để tích lũy các phần tử của một mảng thành một giá trị duy nhất. Nó thực hiện một hàm callback trên mỗi phần tử của mảng và tích lũy kết quả từ trái sang phải.
+- Cú pháp:
+``````
+array.reduce(callback(accumulator, currentValue, index, array), initialValue);
+``````
+- Trong đó:
+    - accumulator: Giá trị tích lũy (initialValue trong lần lặp đầu tiên, sau đó là giá trị trả về từ lần lặp trước đó).
+    - currentValue: Giá trị hiện tại của phần tử mảng.
+    - index (tùy chọn): Chỉ số của phần tử hiện tại trong mảng.
+    - array (tùy chọn): Mảng được duyệt qua.
+    - initialValue (tùy chọn): Giá trị khởi đầu của biến tích lũy (accumulator). Nếu không được cung cấp, phần tử đầu tiên của mảng sẽ được sử dụng làm giá trị khởi đầu.
+    ``````
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce(function(accumulator, currentValue) {
+        return accumulator + currentValue;
+    }, 0);
+    console.log(sum); // Output: 15
+    ``````
+- Phương thức every() kiểm tra tất cả phần tử có thỏa điều kiện không
+- Trả ra
+    + true: nếu tất cả các phần tử đều thỏa điều kiện
+    + fale: nếu chỉ cần có 1 phần tử không thỏa điều kiện
+    ``````
+    const numbers = [45, 4, 9, 16, 25];
+    let allOver18 = numbers.every(myFunction);
+    function myFunction(value, index, array) {
+        return value > 18;
+    } // False
+    ``````
+- Phương thức some() kiểm tra xem có phần tử nào thỏa điều kiện không
+    - Trả ra
+        + true: nếu có ít nhất 1 phần tử thỏa điều kiện
+        + false: nếu không có phần tử nào thóa điều kiện
+        ``````
+        const numbers = [45, 4, 9, 16, 25];
+        let someOver18 = numbers.some(myFunction);
+        function myFunction(value, index, array) {
+            return value > 18;
+        } // True
+        ``````
+## e. Sorting arrays
+- Là quá trình sắp xếp các phần tử trong một mảng theo một thứ tự nhất định.
+- Phương thức sort() sắp xếp mảng theo bảng chữ cái, số từ nhỏ đến lớn
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+-> Apple,Banana,Mango,Orange
+``````
+- Phương thức revert() đảo ngược các phần tử trong array
+``````
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse()
+-> Mango,Apple,Orange,Banana
+``````
 
 
 
