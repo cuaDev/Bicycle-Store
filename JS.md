@@ -278,4 +278,19 @@
         callback();
     }
 ``````
+# 10. Callback
+- Là một hàm được truyền vào hàm khác như một đối số và được gọi trong thân hàm đó
+- Thường được sử dụng để thực hiện các tác vụ không đồng bộ
+- Ví dụ:
+``````
+    function highOrderFunction(callback) {
+        // Thực hiện một số công việc
+        callback();
+    }
+
+    function callbackFunction() {
+        console.log('Đây là một hàm callback.');
+    }
+``````
+
 
