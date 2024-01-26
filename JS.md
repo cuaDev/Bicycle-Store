@@ -130,3 +130,43 @@
         String(123) -> "123"
         (123).toString -> "123"
 ``````
+## Operators, Comparisons, Maths
+### Operatoers
+- Có những kiểu toán tử khác nhau:
+    1. Toán tử số học ( +, -, *, **, /, %, ++, -- )
+    2. Toán tử gán ( =, +=, -=, *=, /=, %=, **=)
+    3. Toán tử so sánh ( ==, ===, !==, !===, >, <, >=, <=, ?)
+    4. Toán tử chuỗi
+    ``````
+        let text1 = "John";
+        let text2 = "Doe";
+        let text3 = text1 + " " + text2;
+        -> John Doe
+    ``````
+    5. Toán tử logic ( &&, ||, !)
+### Maths
+- Cho phép thực hiện các tác vụ trên số
+    - Các phương thức hay dùng:
+        1. Math.round(x): Trả về x được làm tròn về số nguyên gần nhất
+        ``````
+            Math.round(4.6);
+            -> 5
+            Math.round(4.4);
+            -> 4
+        ``````
+        2. Math.ceil(x): Trả về x được làm tròn lên số nguyên gần nhất
+        ``````
+            Math.round(4.6);
+            -> 5
+            Math.round(4.4);
+            -> 5
+        ``````
+        3. Math.floor(x): Trả về x được làm tròn xuống số nguyên gần nhất
+        ``````
+            Math.round(4.6);
+            -> 4
+            Math.round(4.4);
+            -> 4
+        ``````
+        4. Math.trunc(x): Trả về phần nguyên của x (mới trong ES6)
+
