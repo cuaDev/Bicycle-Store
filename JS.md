@@ -11,12 +11,12 @@ alert('World')
 ## c. Nhận xét ( comment)
 - Dùng để nhận xét các mã làm gì và tại sao
 - Có 2 cách nhận xét:
-    - Nhận xét 1 dòng: bắt đầu bằng 2 kí tự gạch chéo (" // ")
+    1. Nhận xét 1 dòng: bắt đầu bằng 2 kí tự gạch chéo (" // ")
     ``````
     // This comment occupies a line of its own
     alert('Hello');
     ``````
-    - Nhận xét đa dòng: bắt đầu bằng dáu chéo lên và hoa thị (" /* ") và kết thúc bằng dấu hoa thị và dấu chéo lên (" */ ")
+    2. Nhận xét đa dòng: bắt đầu bằng dáu chéo lên và hoa thị (" /* ") và kết thúc bằng dấu hoa thị và dấu chéo lên (" */ ")
     ``````
     /* An example with two messages.
     This is a multiline comment.
@@ -25,7 +25,6 @@ alert('World')
     alert('World');
     ``````
 > Không có chuyện nhận xét lồng nhau 
-
 # 2. ES5 và ES6
 ## a. ES5
 - Là phiên bản thứ 5
@@ -41,92 +40,80 @@ alert('World')
 ## a. Variable
 - Có 4 cách khai báo biến
     1. Khai báo tự động
-
     ``````
-        x = 5;
-        y = 6;
+    x = 5;
+    y = 6;
     ``````
     2. Sử dụng var
     ``````
-        var x = 5;
-        var y = 6;
+    var x = 5;
+    var y = 6;
     ``````
     3. Sử dụng let
     ``````
-        let x = 5;
-        let y = 6;
+    let x = 5;
+    let y = 6;
     ``````
     4. Sử dụng const
     ``````
-        const x = 5;
-        const y = 6;
+    const x = 5;
+    const y = 6;
     ``````
-
-
 ## b. Constant
-- Dùng để khai báo một tham chiếu không đổi đến giá trị ( không khai báo lại được, không gán lại được)
+- Dùng để khai báo một tham chiếu không đổi đến giá trị ( không khai báo lại được, không gán lại được )
 - Có block scope
 - Sử dụng keyword "const" để khai báo
 - Sử dụng const khi khai báo:
     1. Một giá trị
         - Khai báo đúng
-
         ``````
-            const PI = 3.14159265359;
+        const PI = 3.14159265359;
         ``````
         - Khai báo sai
-
         ``````
-            const PI;
-            PI = 3.14159265359;
+        const PI;
+        PI = 3.14159265359;
         ``````
     2. Một mảng
         - Có thể thay đổi những phần tử nhưng không thể gán lại mảng
-        - Ví dụ:
             - Đúng
-
             ``````
-                const cars = ["Saab", "Volvo", "BMW"];
-                cars[0] = "Toyota";
-                cars.push("Audi");    
-                -> Toyota,Volvo,BMW,Audi
+            const cars = ["Saab", "Volvo", "BMW"];
+            cars[0] = "Toyota";
+            cars.push("Audi");    
+            -> Toyota,Volvo,BMW,Audi
             ``````
             - Sai
-
             ``````
-                const cars = ["Saab", "Volvo", "BMW"];
-                cars = ["Toyota", "Volvo", "Audi"];
-                -> Error    
+            const cars = ["Saab", "Volvo", "BMW"];
+            cars = ["Toyota", "Volvo", "Audi"];
+            -> Error    
             ``````
-
     3. Một đối tượng
         - Tương tự mảng
-        - Ví dụ:
             - Đúng
-
             ``````
-                const car = {
-                    type:"Fiat", 
-                    model:"500", 
-                    color:"white"
-                    };
-                car.color = "red";
-                car.owner = "Johnson";
+            const car = {
+                type:"Fiat", 
+                model:"500", 
+                color:"white"
+                };
+            car.color = "red";
+            car.owner = "Johnson";
             ``````
             - Sai
-
             ``````
-                const car = {
-                    type:"Fiat", 
-                    model:"500", 
-                    color:"white"
-                    };
-                car = {
-                    type:"Volvo", 
-                    model:"EX60", 
-                    color:"red"
-                    };
-                ->Error
+            const car = {
+                type:"Fiat", 
+                model:"500", 
+                color:"white"
+                };
+            car = {
+                type:"Volvo", 
+                model:"EX60", 
+                color:"red"
+                };
+            ->Error
     4. Một function
 # 4. Data type & Data structure, Type conversions
 ## a. Data type
@@ -148,14 +135,14 @@ alert('World')
 - Biến có thể chuyển đổi thành một kiểu dữ liệu khác
 - Chuyển đổi từ string sang number bằng phương thức: Number(), parseFloat(), parseInt()
 ``````
-        Number("3.14") -> 3.14
-        ParseFloat("3.14")  -> 3.14
-        ParseInt("3.14") -> 3
+Number("3.14") -> 3.14
+ParseFloat("3.14")  -> 3.14
+ParseInt("3.14") -> 3
 ``````
 - Chuyển từ number sang string bằng phương thức: String(), toString()
 ``````
-        String(123) -> "123"
-        (123).toString -> "123"
+String(123) -> "123"
+(123).toString -> "123"
 ``````
 # 5. Operators, Comparisons, Maths
 ## a. Operatoers
@@ -165,10 +152,10 @@ alert('World')
     3. Toán tử so sánh ( ==, ===, !==, !===, >, <, >=, <=, ?)
     4. Toán tử chuỗi
     ``````
-        let text1 = "John";
-        let text2 = "Doe";
-        let text3 = text1 + " " + text2;
-        -> John Doe
+    let text1 = "John";
+    let text2 = "Doe";
+    let text3 = text1 + " " + text2;
+    -> John Doe
     ``````
     5. Toán tử logic ( &&, ||, !)
 ## b. Maths
@@ -176,61 +163,58 @@ alert('World')
     - Các phương thức hay dùng:
         1. Math.round(x): Trả về x được làm tròn về số nguyên gần nhất
         ``````
-            Math.round(4.6);
-            -> 5
-            Math.round(4.4);
-            -> 4
+        Math.round(4.6);
+        -> 5
+        Math.round(4.4);
+        -> 4
         ``````
         2. Math.ceil(x): Trả về x được làm tròn lên số nguyên gần nhất
         ``````
-            Math.round(4.6);
-            -> 5
-            Math.round(4.4);
-            -> 5
+        Math.round(4.6);
+        -> 5
+        Math.round(4.4);
+        -> 5
         ``````
         3. Math.floor(x): Trả về x được làm tròn xuống số nguyên gần nhất
         ``````
-            Math.round(4.6);
-            -> 4
-            Math.round(4.4);
-            -> 4
+        Math.round(4.6);
+        -> 4
+        Math.round(4.4);
+        -> 4
         ``````
         4. Math.trunc(x): Trả về phần nguyên của x (mới trong ES6)
 # 6. Nullish coalescing operator
 - Là toán tử logic, trả ra kết quả bên phải khi bên trái trả ra falsy
 - Ví dụ:
 ``````
-    const foo = null ?? 'default string';
-    -> 'default string'
+const foo = null ?? 'default string';
+-> 'default string'
 ``````
 # 7. Functions & Arrow functions
 ## a. Function
 - Function là một khối code được thiết kế để thực hiện một tác vụ cụ thể
     - Các cách khai báo function
         1. Function declaration
-            - Ví dụ:
             ``````
-                function myFunction(p1, p2) {
-                    return p1 * p2;
-                }
+            function myFunction(p1, p2) {
+                return p1 * p2;
+            }
             ``````
         2. Function expression
-            - Ví dụ:
             ``````
-                var count = function(array) { 
-                    // Function expression  
-                    return array.length;
-                }
+            var count = function(array) { 
+                // Function expression  
+                return array.length;
+            }
             ``````
         3. Arrow function
-            - Ví dụ:
             ``````
-                var absValue = (number) => {  
-                    if (number < 0) {
-                        return -number;
-                    }
-                    return number;
+            var absValue = (number) => {  
+                if (number < 0) {
+                    return -number;
                 }
+                return number;
+            }
             ``````
 # 8. Pure functions, Side effects, State mutation, Event propagation
 ## a. Pure functions
@@ -239,18 +223,18 @@ alert('World')
 - Ví dụ:
     - Hàm không thuần khiết
     ``````
-        let tax = Math.random();
+    let tax = Math.random();
         function calculateGST(productPrice) {          
             return productPrice * (tax / 100) + productPrice;
         }
-        console.log(calculateGST(15))
+    console.log(calculateGST(15))
     ``````        
     - Hàm thuần khuyết
     ``````
-        function calculateGST(productPrice) {
-            return productPrice * 0.05;
-        }
-        console.log(calculateGST(15))
+    function calculateGST(productPrice) {
+        return productPrice * 0.05;
+    }
+    console.log(calculateGST(15))
     ``````
 
 ## b. Side effects
@@ -258,39 +242,37 @@ alert('World')
 - Một số trường hợp:
     1. Thay đổi giá trị biến toàn cục hoặc biến bên ngoài phạm vi
     ``````
-        let count = 0;
-        function increment() {
-            count++; // Thay đổi biến count bên ngoài phạm vi hàm
-        }
-        increment();
-        console.log(count);
-        -> 1
+    let count = 0;
+    function increment() {
+        count++; // Thay đổi biến count bên ngoài phạm vi hàm
+    }
+    increment();
+    console.log(count);
+    -> 1
     ``````
-       
     2. Thay đổi DOM
     ``````
-        function updateTitle() {
-            document.title = 'New Title'; // Thay đổi nội dung của thẻ <title> trong DOM
+    function updateTitle() {
+        document.title = 'New Title'; // Thay đổi nội dung của thẻ <title> trong DOM
         }
-        updateTitle();
+    updateTitle();
     ``````
     3. Gọi API và xử lý dữ liệu
     ``````
-        function fetchData(url) {
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                        // Xử lý dữ liệu nhận được từ API
-                });
-        }
-        fetchData('https://api.example.com/data');
+    function fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                    // Xử lý dữ liệu nhận được từ API
+            });
+    }
+    fetchData('https://api.example.com/data');
     ``````
 ## c. State mutation
 - Xảy ra khi giá trị của một biến hay một đối tượng được thay đổi trực tiếp
-- Ví dụ:
 ``````
-    let count = 1;
-    count = count + 1; // Mutation: Thay đổi giá trị của     biến "count"
+let count = 1;
+count = count + 1; // Mutation: Thay đổi giá trị của     biến "count"
 ``````
 ## d. Event propagation
 - Là quá trình diễn ra khi một sự kiện xảy ra trong môi trường DOM của trình duyệt web. Trong DOM, sự kiện có thể xảy ra trên các phần tử khác nhau và sau đó lan truyền qua các phần tử cha hoặc con của chúng.
@@ -298,26 +280,25 @@ alert('World')
 # 9. High order functions
 - Là môt hàm hoạt động trên hàm khác
 - Nhận một hoặc nhiều hàm khác làm đối số, hoặc trả về một hàm khác
-- Ví dụ:
 ``````
-    function highOrderFunction(callback) {
-        // Thực hiện một số công việc
-        callback();
-    }
+function highOrderFunction(callback) {
+    // Thực hiện một số công việc
+    callback();
+}
 ``````
 # 10. Callback
 - Là một hàm được truyền vào hàm khác như một đối số và được gọi trong thân hàm đó
 - Thường được sử dụng để thực hiện các tác vụ không đồng bộ
 - Ví dụ:
 ``````
-    function highOrderFunction(callback) {
-        // Thực hiện một số công việc
-        callback();
-    }
+function highOrderFunction(callback) {
+    // Thực hiện một số công việc
+    callback();
+}
 
-    function callbackFunction() {
-        console.log('Đây là một hàm callback.');
-    }
+function callbackFunction() {
+    console.log('Đây là một hàm callback.');
+}
 ``````
 # 11. Promises
 - Đại diện cho một giá trị ở thời điểm hiện tại có thể chưa tồn tại, nhưng sẽ được xử lý và có giá trị vào một thời điểm đó trong tương lai.
@@ -327,21 +308,20 @@ alert('World')
     3. Reject: Là trạng thái Promise thực hiện thất bại
 - Ví dụ:
 ``````
-    const myPromise = new Promise((resolve, reject) => {
-        // Thực hiện công việc không đồng bộ ở đây
-        // Nếu thành công, gọi hàm resolve với giá trị mong muốn
-        // Nếu thất bại, gọi hàm reject với lý do (error)
+const myPromise = new Promise((resolve, reject) => {
+    // Thực hiện công việc không đồng bộ ở đây
+    // Nếu thành công, gọi hàm resolve với giá trị mong muốn
+    // Nếu thất bại, gọi hàm reject với lý do (error)
+});
+    // Sử dụng then để xử lý kết quả khi Promise thực hiện thành công
+myPromise
+    .then((result) => {
+        console.log('Thành công:', result);
+    })
+    .catch((error) => {
+        console.error('Thất bại:', error);
     });
-        // Sử dụng then để xử lý kết quả khi Promise thực hiện thành công
-    myPromise
-        .then((result) => {
-            console.log('Thành công:', result);
-        })
-        .catch((error) => {
-            console.error('Thất bại:', error);
-        });
 ``````
-
 # 12. async / await
 - Để viết mã bất đồng bộ một các đồng bộ
 - Các tác vụ không đồng bộ thường được thực hiện bằng cách sử dụng Promises hoặc callbacks. Tuy nhiên, việc sử dụng Promises và callbacks có thể dẫn đến việc lồng nhau nhiều mức độ và gây ra hiện tượng "callback hell"
@@ -350,15 +330,34 @@ alert('World')
     - await: Từ khóa await chỉ được sử dụng bên trong một hàm được khai báo là async. Nó dùng để đợi cho đến khi một Promise được giải quyết (resolved) và trả về kết quả. Trong khi chờ, luồng thực thi của hàm sẽ tạm dừng, nhưng không chặn luồng chính (main thread) của trình duyệt.
 - Ví dụ:
 ``````
-    async function myDisplay() {
-        let myPromise = new Promise(function(resolve) {
-            resolve("I love You !!");
-        });
-        document.getElementById("demo").innerHTML = await myPromise;
-        }
+async function myDisplay() {
+    let myPromise = new Promise(function(resolve) {
+        resolve("I love You !!");
+    });
+    document.getElementById("demo").innerHTML = await myPromise;
+    }
 
-    myDisplay();
+myDisplay();
 ``````
+# 13. Control flow & Error handling
+## a. Control flow
+- Control flow là cách mà luồng thực thi của một chương trình được quản lý. Nó mô tả cách các câu lệnh trong chương trình được thực hiện theo thứ tự, từ trên xuống dưới. Luồng kiểm soát quyết định thứ tự các câu lệnh được thực hiện, giúp kiểm soát việc chạy chương trình.
+## b. Error handling
+- Error handling là quá trình quản lý và xử lý lỗi trong chương trình. Khi một lỗi xảy ra trong quá trình thực thi, quá trình xử lý lỗi đảm bảo rằng chương trình không bị crash và người dùng nhận được thông báo hoặc quay lại trạng thái ổn định.
+- Sử dụng try và catch
+``````
+try {
+    // Mã có thể gây ra ngoại lệ
+    const result = 10 / 0; // Gây ra lỗi chia cho 0
+    console.log(result); // Không được thực thi
+}
+catch (error) {
+    // Xử lý ngoại lệ
+    console.error('Đã xảy ra lỗi:',error);
+}
+``````
+
+
 
 
 
