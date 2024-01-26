@@ -732,6 +732,18 @@ fruits.has("apples");
 - Một Set có thể chứa bất kỳ kiểu dữ liệu nào và sẽ tự động loại bỏ bất kỳ giá trị trùng lặp nào
 - Phương thức set() dùng để thêm phần tử
 - Nếu thêm phần tử trùng lặp thì sẽ lưu phần tử đầu tiên
+# 21. Prototypes & Inheritance
+- Thuôc tính prototype cho phép thêm các thuộc tính mới vào hàm tạo đối tượng
+``````
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+Person.prototype.nationality = "English";
+``````
+
 
 
 
