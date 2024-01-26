@@ -1,4 +1,31 @@
 # 1. Code structure
+## a. Câu lệnh 
+- Câu lệnh dùng để thực hiện các tác vụ
+- Các câu lệnh có thể viết trên cùng một dòng nhưng phải ngăn cách giữa các câu lệnh băng dấu ";".
+## b. Dấu chấm phẩy
+- Dấu chấm phẩy có thể bỏ qua
+``````
+alert('Hello')
+alert('World')
+``````
+## c. Nhận xét ( comment)
+- Dùng để nhận xét các mã làm gì và tại sao
+- Có 2 cách nhận xét:
+    - Nhận xét 1 dòng: bắt đầu bằng 2 kí tự gạch chéo (" // ")
+    ``````
+    // This comment occupies a line of its own
+    alert('Hello');
+    ``````
+    - Nhận xét đa dòng: bắt đầu bằng dáu chéo lên và hoa thị (" /* ") và kết thúc bằng dấu hoa thị và dấu chéo lên (" */ ")
+    ``````
+    /* An example with two messages.
+    This is a multiline comment.
+    */
+    alert('Hello');
+    alert('World');
+    ``````
+> Không có chuyện nhận xét lồng nhau 
+
 # 2. ES5 và ES6
 ## a. ES5
 - Là phiên bản thứ 5
