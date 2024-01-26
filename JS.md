@@ -356,7 +356,7 @@ catch (error) {
     console.error('Đã xảy ra lỗi:',error);
 }
 ``````
-# 13. Arrays, Array methods, Array iteration, Array const, Sorting arrays
+# 14. Arrays, Array methods, Array iteration, Array const, Sorting arrays
 ## a. Array
 - Tạo array
 ``````
@@ -503,7 +503,59 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.reverse()
 -> Mango,Apple,Orange,Banana
 ``````
+# 15. Loops & iteration
+- Loop là một cấu trúc điều khiển cho phép thực hiện một khối mã lệnh lặp đi lặp lại một số lần nhất định hoặc cho đến khi một điều kiện được thỏa mãn.
+- Các câu lệnh cho vòng lặp được cung cấp trong JS:
+    1. Câu lệnh for
+    ``````
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+    ``````
+    2. Câu lệnh for...in : lặp index đối với mảng và lặp key đối với object
+    ``````
+    let person = {
+        name: 'John',
+        age: 30,
+        city: 'New York'
+    };
 
+    for (let key in person) {
+        console.log(key + ': ' + person[key]);
+    }
+    ->  name: John
+        age: 30
+        city: New York
+    ``````
+    3. Câu lệnh for...of : lặp giá trị
+    ``````
+    let numbers = [1, 2, 3, 4, 5];
+    for (let number of numbers) {
+        console.log(number);
+    }
+    ->  1
+        2
+        3
+        4
+        5
+    ``````
+    4. Câu lệnh do...while
+    ``````
+    let number;
+    do {
+        number = parseInt(prompt('Nhập một số từ 1 đến 5:'));
+    }
+    while (number < 1 || number > 5);
+    console.log('Số bạn đã nhập là: ' + number);
+    ``````
+    5. Câu lệnh while
+    ``````
+    let count = 1;
+    while (count <= 5) {
+        console.log(count);
+        count++;
+    }
+    ``````
 
 
 
