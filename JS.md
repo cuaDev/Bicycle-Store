@@ -267,3 +267,15 @@
 ``````
 ## d. Event propagation
 - Là quá trình diễn ra khi một sự kiện xảy ra trong môi trường DOM của trình duyệt web. Trong DOM, sự kiện có thể xảy ra trên các phần tử khác nhau và sau đó lan truyền qua các phần tử cha hoặc con của chúng.
+
+# 9. High order functions
+- Là môt hàm hoạt động trên hàm khác
+- Nhận một hoặc nhiều hàm khác làm đối số, hoặc trả về một hàm khác
+- Ví dụ:
+``````
+    function highOrderFunction(callback) {
+        // Thực hiện một số công việc
+        callback();
+    }
+``````
+
