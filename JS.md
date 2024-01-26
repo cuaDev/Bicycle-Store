@@ -205,3 +205,65 @@
                     return number;
                 }
             ``````
+# 8. Pure functions, Side effects, State mutation, Event propagation
+## a. Pure functions
+- Luôn trả về kết quả giống nhau khi tham số truyền vào giống nhau
+- Không bị phụ thuộc bởi bát cứ trạng thái, đữ liệu hay thay đổi nào khi chương trình chạy mà chỉ phụ thuộc vào duy nhất vào tham số truyền vào.
+- Ví dụ:
+    - Hàm không thuần khiết
+    ``````
+        let tax = Math.random();
+        function calculateGST(productPrice) {          
+            return productPrice * (tax / 100) + productPrice;
+        }
+        console.log(calculateGST(15))
+    ``````        
+    - Hàm thuần khuyết
+    ``````
+        function calculateGST(productPrice) {
+            return productPrice * 0.05;
+        }
+        console.log(calculateGST(15))
+    ``````
+
+## b. Side effects
+- Thường xẩy ra khi một hàm thực hiện một hành động không chỉ là việc tính toán giá trị trả về, mà còn làm thay đổi trạng thái của ứng dụng hoặc môi trường xung quanh.
+- Một số trường hợp:
+    1. Thay đổi giá trị biến toàn cục hoặc biến bên ngoài phạm vi
+    ``````
+        let count = 0;
+        function increment() {
+            count++; // Thay đổi biến count bên ngoài phạm vi hàm
+        }
+        increment();
+        console.log(count);
+        -> 1
+    ``````
+       
+    2. Thay đổi DOM
+    ``````
+        function updateTitle() {
+            document.title = 'New Title'; // Thay đổi nội dung của thẻ <title> trong DOM
+        }
+        updateTitle();
+    ``````
+    3. Gọi API và xử lý dữ liệu
+    ``````
+        function fetchData(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                        // Xử lý dữ liệu nhận được từ API
+                });
+        }
+        fetchData('https://api.example.com/data');
+    ``````
+## c. State mutation
+- Xảy ra khi giá trị của một biến hay một đối tượng được thay đổi trực tiếp
+- Ví dụ:
+``````
+    let count = 1;
+    count = count + 1; // Mutation: Thay đổi giá trị của     biến "count"
+``````
+## d. Event propagation
+- Là quá trình diễn ra khi một sự kiện xảy ra trong môi trường DOM của trình duyệt web. Trong DOM, sự kiện có thể xảy ra trên các phần tử khác nhau và sau đó lan truyền qua các phần tử cha hoặc con của chúng.
