@@ -556,6 +556,18 @@ fruits.reverse()
         count++;
     }
     ``````
+# 16.Objects
+- Trong JavaScript, object (đối tượng) là một kiểu dữ liệu phức tạp, cho phép lưu trữ và truy cập thông tin dưới dạng cặp khóa-giá trị.
+- Đối tượng trong JavaScript được tạo ra bằng cách sử dụng cặp dấu ngoặc nhọn {} và có thể chứa các thuộc tính và phương thức.
+``````
+    const person = {
+        firstName:"John", 
+        lastName:"Doe", 
+        age:50, 
+        eyeColor:"blue"
+        };
+``````
+
 
 
 
