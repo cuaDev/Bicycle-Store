@@ -14,7 +14,7 @@
 ### Variable
 - Có 4 cách khai báo biến
     1. Khai báo tự động
-    
+
     ``````
         x = 5;
         y = 6;
@@ -36,7 +36,7 @@
     ``````
 
 
-## Constant
+### Constant
 - Dùng để khai báo một tham chiếu không đổi đến giá trị ( không khai báo lại được, không gán lại được)
 - Có block scope
 - Sử dụng keyword "const" để khai báo
@@ -101,3 +101,32 @@
                     };
                 ->Error
     4. Một function
+## Data type & Data structure, Type conversions
+### Data type
+- Kiểu dữ liệu nguyên thủy : Là dữ liệu không phải là đối tượng và không có phương thức hoặc thuộc tính
+    - Có 7 kiểu dữ liệu nguyên thủy :
+        - string
+        - number
+        - bigint : sử dụng để biểu diễn các số nguyên có độ dài lớn nằm ngoài phạm vi của kiểu dữ liệu 'number'
+        - boolean
+        - undefined
+        - symbol
+        - null
+- Kiểu dữ liệu Đối tượng : Là kiểu dữ liệu phức tạp
+    - Có 3 kiểu dư liệu
+        - object
+        - array
+        - date
+### Type conversions
+- Biến có thể chuyển đổi thành một kiểu dữ liệu khác
+- Chuyển đổi từ string sang number bằng phương thức: Number(), parseFloat(), parseInt()
+``````
+        Number("3.14") -> 3.14
+        ParseFloat("3.14")  -> 3.14
+        ParseInt("3.14") -> 3
+``````
+- Chuyển từ number sang string bằng phương thức: String(), toString()
+``````
+        String(123) -> "123"
+        (123).toString -> "123"
+``````
