@@ -590,6 +590,33 @@ const person = { name: 'John', age: 30 };
 const newPerson = { ...person, profession: 'Developer' };
 console.log(newPerson);  // Output: { name: 'John', age: 30, profession: 'Developer' }
 ``````
+# 18. Classes
+- Sử dụng keyword class để tạo class
+- Phương thức constructor() để khai báo các thuộc tính
+``````
+class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+}
+``````
+> Class ES11
+- Field riêng tư
+``````
+class Smartphones {
+    #phone_color = "silver";
+    designer(name) {
+        this.name = name;
+    }
+    get_color() {
+        return this.#phone_color;
+    }
+}
+const iPhone = new Smartphones("iPhone");
+console.log(iPhone.get_color()); // output is: silver
+console.log(iPhone.#phone_color) // output is: Private field '#phone_color' must be declared in an enclosing class
+``````
 
 
 
