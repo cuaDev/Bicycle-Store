@@ -784,6 +784,17 @@ Person.prototype.nationality = "English";
     var hoist = 500; //undefined
     ``````
 # 24. Modules, Export, Import, Dynamic imports
+## a. Modules
+- Là một tệp ( file ) độc lập chứa mã Javascript, có thể chứa biến, hàm, lớp và các khối mã khác. 
+``````
+index.html
+main.js
+modules/
+    canvas.js
+    square.js
+``````
+## b. Export 
+- Dùng để xuất các function, biến từ module để module khác sử dụng nó trong module khác
 # 25. Regular Expression
 # 26. HTML DOM
 # 27. BOM
