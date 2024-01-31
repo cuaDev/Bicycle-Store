@@ -795,6 +795,29 @@ modules/
 ``````
 ## b. Export 
 - Dùng để xuất các function, biến từ module để module khác sử dụng nó trong module khác
+- ES6 cung cấp hai cách để export một module: 
+    1. named export
+        - Xuất nhiều thứ từ một module bằng cách thêm keyword export vào khai báo chúng.
+        - Những thứ export phân biệt bằng tên 
+        - Sau đó, import những thứ cần sử dụng bằng cách bao quanh chúng bằng dấu ngoặc nhọn { }. 
+        > Note: Tên của import giống với tên export  
+        ``````
+        function squareNumber(x) {
+            return x * x; 
+        }
+
+        const pi = 3.14; 
+        export {squareNumber, pi} ; 
+        ``````
+        - import
+        ``````
+        import {squareNumber, pi} from "functionsFile"; 
+        const radius = 7; 
+        console.log("Area of a circle is", pi * squareNumber(7));
+        `````` 
+    2. default export 
+        - Chỉ cho phép xuất một mặc định cho mỗi file 
+        - Có thể cho một function, class hoặc một object
 # 25. Regular Expression
 # 26. HTML DOM
 # 27. BOM
