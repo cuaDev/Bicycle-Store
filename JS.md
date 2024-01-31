@@ -572,10 +572,29 @@ fruits.reverse()
 - Rest parameters cho phép đại diện cho một số lượng tham số không xác định trong một hàm và biểu diễn chúng dưới dạng một mảng.
 - Được ký hiệu bằng ba dấu chấm (...) và được đặt trước tên tham số cuối cùng trong khai báo hàm.
 ``````
-    function rest(...rest){
-        console.log(rest) // [1, 2, 3, 4]
-    }
-    rest(1, 2, 3, 4)
+function rest([a, b, ...rest]) {
+    console.log(a) // 1
+    console.log(b) // 2
+    console.log(rest) // [3, 4]
+}
+rest([1, 2, 3, 4])
+``````
+> Có thể truyền trực tiếp key của object như sau :
+``````
+function rest({ id, name, ...rest }) {
+    console.log(id) 
+    console.log(name)
+    console.log(rest)
+}
+
+rest({
+    id: 1,
+    name: 'Js',
+    price: 1000,
+    description: 'content'
+
+})
+
 ``````
 ## b. Spread
 - Spread đại diện lấy tất cả các phần tử của mảng hoặc object
