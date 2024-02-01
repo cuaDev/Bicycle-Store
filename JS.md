@@ -856,6 +856,23 @@ modules/
     2. default export 
         - Chỉ cho phép xuất một mặc định cho mỗi file 
         - Có thể cho một function, class hoặc một object
+## c. import
+- Dùng để import những các module đã export
+- Cú pháp:
+``````
+import functionName from './module.js'
+``````
+- Trong đó:
+    - functionName có thể đặt tên tùy ý hoặc đặt trùng với tên function cần import.
+
+- Nếu muốn import nhiều hàm hoặc biến từ module, thì có thể liệt kê ra trong dấu ngoặc nhọn, tách nhau bằng dấu phẩy
+``````
+import {a, b, c} from './module.js'
+``````
+- Nếu muốn import tất cả module 
+``````
+import * as name from './module.js'
+``````
 # 25. Regular Expression
 # 26. HTML DOM
 # 27. BOM
