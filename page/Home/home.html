@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="home.css">
     <script src="https://kit.fontawesome.com/e070737004.js" crossorigin="anonymous"></script>
-    <script src="/learnJS/maxSubmatrix.js"></script>
 </head>
 
 <body>
@@ -34,7 +33,18 @@
             <div class="header_item">
                 <i class="fa-solid fa-magnifying-glass icon"></i>
                 <i class="fa-solid fa-bag-shopping icon"></i>
-                <i class="fa-regular fa-user icon"></i>
+                <i class="fa-regular fa-user icon" onclick="handleModalUser()"></i>
+            </div>
+            <div class="modal_user">
+                <div class="modal_user_account">
+                    <i class="fa-regular fa-user icon"></i>
+                    <p>Tài khoản</p>
+                </div>
+
+                <div class="modal_user_log-out">
+                    <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                    <p>Log out</p>
+                </div>
             </div>
         </div>
 
@@ -398,6 +408,7 @@
             </div>
         </div>
     </div>
+    <script src="./home.js"></script>
 </body>
 
 </html>

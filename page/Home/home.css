@@ -55,6 +55,7 @@ ul {
 
 .header_item {
     line-height: 100px;
+    position: relative;
 }
 
 .header_item .icon {
@@ -487,19 +488,35 @@ ul {
     color: #0ab0a6;
 }
 
+.header .modal_user {
+    position: absolute;
+    box-shadow: 0 4px 4px #000;
+    right: 84px;
+    margin-top: 100px;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    display: none;
+}
+
+.modal_user .modal_user_account,
+.modal_user .modal_user_log-out {
+    display: flex;
+}
+
+.modal_user .modal_user_account {
+    margin-bottom: 10px;
+}
+
+.modal_user .icon {
+    margin-right: 10px;
+}
+
 /* Reponsive */
 
 .header .header_icon_menu {
     display: none;
 }
-
-/* General reponsive */
-
-/* @media only screen and (max-wdth: 1200px) {
-    .header .header_navigation {
-        display: none;
-    }
-} */
 
 @media screen and (max-width: 992px) {
     .header .header_navigation {
