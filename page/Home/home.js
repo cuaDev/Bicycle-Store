@@ -1,11 +1,21 @@
 var modalUser = document.querySelector(".modal_user")
-console.log(modalUser)
+var modalSearch = document.querySelector(".modal_search")
 var handleModalUser = () => {
-    if (modalUser.style.display == "none") {
+    if (modalUser.style.display == "") {
         modalUser.style.display = "block"
     }
     else
-        modalUser.style.display = "none"
-
+        modalUser.style.display = ""
 }
 
+
+var handleModalSearch = () => {
+    if (modalSearch.style.display == "") {
+        modalSearch.style.display = "block"
+    }
+}
+
+var handleCloseModalSearch = () => {
+    modalSearch.style.display = ""
+
+}
