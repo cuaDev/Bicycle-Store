@@ -216,6 +216,25 @@ const foo = null ?? 'default string';
                 return number;
             }
             ``````
+## b. Arrow function
+- Giúp viết code ngắn gọn hơn 
+    - Ví dụ
+        - function bình thường
+        ``````
+        const hello = function (a, b) {
+            return a + b
+        } 
+        ``````
+        - arrow function
+        ``````
+        const hello = (a, b) => a + b
+        ``````
+        > Nếu muốn return 1 object thì cần nhóm lại bằng cặp ngoặc tròn
+        ``````
+        const hello = (a, b) => ({a:10, b:5})
+        ``````
+- Từ khóa this
+
 # 8. Pure functions, Side effects, State mutation, Event propagation
 ## a. Pure functions
 - Luôn trả về kết quả giống nhau khi tham số truyền vào giống nhau
