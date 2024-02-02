@@ -877,7 +877,17 @@ import * as name from './module.js'
 # 26. HTML DOM
 # 27. BOM
 # 28. Repaint & Reflow
-
+# 29. IIFE 
+- IIFE viết tắt immediately invoked function expression
+- là một biểu thức hàm tức thời được thực thi ngay sau khi được định nghĩa. 
+- IIFE có tính chất function scope 
+- Để tạo một IIFE đặt một hàm trong dấu ngoặc đơn và ngay sau đó gọi nó bằng cách thêm một cặp dấu ngoặc đơn ở cuối.
+``````
+(function(){
+    var x = 10
+    console.log(x)
+})();
+``````
 
 
 
