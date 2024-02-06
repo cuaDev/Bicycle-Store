@@ -838,6 +838,15 @@ inforLogger('Gửi thành công') // Infor Gửi thành công
     console.log(hoist);
     var hoist = 500; //undefined
     ``````
+> Lưu ý: Khai báo biến với let, const vẫn được hoisting nhưng không được khởi tạo giá trị mà biến khởi tạo đưa vào "Temporal Dead Zone"
+``````
+{
+    console.log(fullName)
+    let fullName = "Nguyen Van A"
+}
+
+// Uncaught ReferenceError: Cannot access 'fullName' before initialization 
+``````
 # 24. Modules, Export, Import, Dynamic imports
 ## a. Modules
 - Là một tệp ( file ) độc lập chứa mã Javascript, có thể chứa biến, hàm, lớp và các khối mã khác. 
