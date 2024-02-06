@@ -784,7 +784,7 @@ Person.prototype.nationality = "English";
 # 22. Scope & Closure
 ## a. Scope
 - Có 3 loại scope
-    - Block scope: Các biến được khai báo bên trong khối { } không thể được truy cập từ bên ngoài khối
+    - Block scope: Các biến được khai báo bên trong khối mã { } không thể được truy cập từ bên ngoài khối
     > Có 2 keyword có block scope : let và const
     ``````
     {
@@ -793,7 +793,9 @@ Person.prototype.nationality = "English";
     // x can NOT be used here
     ``````
     - Function scope: Các biến được xác định bên trong hàm không thể truy cập được (hiển thị) từ bên ngoài hàm.
-    - Global Scope: Một biến được khai báo bên ngoài hàm sẽ trở thành GLOBAL.
+    - Global Scope: 
+        - Một biến được khai báo bên ngoài hàm sẽ trở thành GLOBAL.
+        - Bất cứ đâu trong chương trình cũng sẽ truy cập, sử dụng biến đó và biến cũng thay đổi theo sau khi truy cập, sử dụng.
     ``````
     let carName = "Volvo";
     // code here can use carName
@@ -803,7 +805,22 @@ Person.prototype.nationality = "English";
     ``````
 
 ## b. Closure
-- Cho phép một hàm truy cập và sử dụng các biến từ phạm vi ngoài của nó
+- Là một hàm có thể ghi nhớ nơi nó được tạo và truy cập được biến ở bên ngoài phạm vi của nó 
+`````
+function createLogger ( namespace ) {
+    function logger ( message ){
+        console.log(`${namespace} ${message}`)
+    }
+
+    return logger
+}
+
+
+const inforLogger = createLogger('Infor')
+inforLogger('Bắt đầu gửi mail') // Infor Bắt đầu gửi mail
+inforLogger('Gửi thất bại lần 1, Vui lòng thử lại') // Infor Gửi thất bại lần 1, Vui lòng thử lại
+inforLogger('Gửi thành công') // Infor Gửi thành công
+`````
 # 23. Call stack & Hoisting
 ## a. Call stack
 - Vào sau ra trước
